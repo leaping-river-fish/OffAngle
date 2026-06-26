@@ -1,0 +1,34 @@
+# Unity generated
+Library/
+Temp/
+Obj/
+Logs/
+UserSettings/
+MemoryCaptures/
+
+# Build outputs
+Build/
+Builds/
+
+# IDE files
+.vs/
+.vscode/
+
+# Git
+.git/
+
+# Unity generated project files
+*.csproj
+*.sln
+*.user
+*.pidb
+*.booproj
+
+# Packages cache
+Library/PackageCache/
+
+# Addressables generated data
+ServerData/
+
+# Crash dumps
+sysinfo.txt

@@ -258,9 +258,10 @@ GameObject:
   - component: {fileID: 941064504}
   - component: {fileID: 941064503}
   - component: {fileID: 941064502}
+  - component: {fileID: 1575108840}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,7 +402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &961739750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,6 +756,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1575108839}
   - component: {fileID: 1575108838}
+  - component: {fileID: 1575108843}
+  - component: {fileID: 1575108842}
+  - component: {fileID: 1575108841}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -803,11 +807,80 @@ Transform:
   - {fileID: 941064501}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1575108840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941064500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171fd13e2bb741f4393c4f0e8cc263eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OffAngle.Player.PlayerCameraController
+  _playerRoot: {fileID: 0}
+  _inputReader: {fileID: 0}
+  _sensitivity: 0.15
+  _invertY: 0
+  _maxPitchUp: 89
+  _maxPitchDown: 89
+--- !u!114 &1575108841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575108837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160c882e43644944d9a529921c884d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OffAngle.Player.PlayerController
+  _movementSettings:
+    WalkSpeed: 5
+    SprintSpeed: 9
+    CrouchSpeed: 2.5
+    JumpHeight: 1.5
+    Gravity: 20
+    MaxJumps: 1
+    AirControlMultiplier: 0.35
+    AirAcceleration: 15
+    SlideEntrySpeedThreshold: 4
+    SlideDeceleration: 5
+    SlideDuration: 1.2
+    WallRunGravityScale: 0.2
+    WallRunMinSpeed: 3
+    WallRunDuration: 2
+--- !u!114 &1575108842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575108837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5dd80688eb53254cb151fbb5a357786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OffAngle.Movement.MovementStateMachine
+--- !u!114 &1575108843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575108837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e75e171003380d448b38905040726b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OffAngle.Core.PlayerInputReader
+  _actionAsset: {fileID: -944628639613478452, guid: 077e697569999014f8dcfd3405db534f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 961739753}
   - {fileID: 203844589}
   - {fileID: 1337679628}
   - {fileID: 1056619468}
